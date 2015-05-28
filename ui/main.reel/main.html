@@ -13,6 +13,26 @@
                 "element": {"#": "main"}
             }
         },
+        "image": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "image"},
+                "contenteditable": "true",
+                "crossOrigin": null,
+                "dir": "ltr",
+                "draggable": "true",
+                "src": "http://d284oi8cds1jbk.cloudfront.net/2014/11/logonovant.jpg"
+            }
+        },
+        "rangeController": {
+            "prototype": "montage/core/range-controller",
+            "properties": {
+                "axis": "horizontal",
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
+            }
+        },
         "slider": {
             "prototype": "digit/ui/slider.reel",
             "properties": {
@@ -32,7 +52,11 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
+        @rangeController
+        @rangeController
         <div data-montage-id="slider"></div>
+        @rangeController
+        <img data-montage-id="image">
     </div>
 </body>
 </html>
